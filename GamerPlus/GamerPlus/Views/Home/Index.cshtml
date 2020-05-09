@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<link href="~/fontawesome-free-5.13.0-web/css/all.min.css" rel="stylesheet" />
+<style>
+
+</style>
+
+<div class="main">
+
+    <div class="topbar">
+        <div class="mynav">
+            <div class="nav_icons">
+                <div class="logo">
+                    @{Html.RenderAction("LogoAppName", "Home");}
+                </div>
+            </div><!--
+         --><div class="nav_icons">
+                <div class="icons">
+                    <div class="icon_div">
+                        <div class="fas fa-search icon"></div>
+                    </div><!--
+                 --><div class="icon_div">
+                        <div class="fas fa-shopping-bag icon"></div>
+                    </div><!--
+                 --><div class="icon_div">
+                        <div class="fas fa-user-circle icon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mainbody">
+
+        <div class="leftside">
+            @{Html.RenderAction("GamingConsole", "Home");}
+        </div><!--
+    --><div class="rightside">
+
+           <div class="topfour">
+
+               <div id="carouselmain" class="carousel_main">
+                   @{Html.RenderAction("Carousel", "Home", new { consoleId = 1 });}
+               </div>
+               
+           </div>
+
+           <div class="btnmain_div">
+               <div class="btnmain_divinner">
+                   <div class="btncenter_div">
+                       <div class="btncenter_divinner">
+                           <div id="btnGenre" class="btngenretitle"><span class="genre">Genre</span></div>
+                       </div><!--
+                    --><div class="btncenter_divinner">
+                           <div id="btnTitle" class="btngenretitle_"><span class="title">Title</span></div>
+                       </div>
+                   </div>
+               </div>
+               <div class="btnmain_divinner" style="">
+                   <div class="letters_div">
+                       @*<div class="letter_div0">
+                           <span class="letter">All</span>
+                       </div>*@
+                   </div>
+               </div>
+           </div> 
+
+           <div class="gamelist">
+
+               @{Html.RenderAction("GenreList", "Home", new { consoleId = 1, alpa = "All" });}
+
+           </div>
+
+           <div class="gamelist_">
+
+               @{Html.RenderAction("AllGameList", "Home", new { consoleId = 1, alpa = "All" });}
+
+           </div>
+           
+       </div>
+
+    </div>
+    
+
+</div>
+
+<script>
+
+</script>

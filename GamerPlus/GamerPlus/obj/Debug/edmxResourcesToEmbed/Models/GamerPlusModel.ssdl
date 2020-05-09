@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GamerPlusModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Console">
+    <Key>
+      <PropertyRef Name="Console_ID" />
+    </Key>
+    <Property Name="Console_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ConsoleName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Developer">
+    <Key>
+      <PropertyRef Name="DevID" />
+    </Key>
+    <Property Name="DevID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DeveloperName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Game">
+    <Key>
+      <PropertyRef Name="GameID" />
+    </Key>
+    <Property Name="GameID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GameTitle" Type="nvarchar(max)" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Image" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="System_Requirements" Type="nvarchar(max)" />
+    <Property Name="ConsoleID_FK" Type="int" />
+    <Property Name="DevID_FK" Type="int" />
+    <Property Name="BestSelling" Type="int" />
+    <Property Name="GenreID_FK" Type="int" />
+  </EntityType>
+  <EntityType Name="GamePreview">
+    <Key>
+      <PropertyRef Name="PreviewID" />
+    </Key>
+    <Property Name="PreviewID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Preview" Type="nvarchar(max)" />
+    <Property Name="PreviewType" Type="int" />
+    <Property Name="GameID_FK" Type="int" />
+  </EntityType>
+  <EntityType Name="Genre">
+    <Key>
+      <PropertyRef Name="GenreID" />
+    </Key>
+    <Property Name="GenreID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GenreName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NameLogo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppName" Type="nvarchar" MaxLength="50" />
+    <Property Name="AppLogo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="GamerPlusModelStoreContainer">
+    <EntitySet Name="Console" EntityType="Self.Console" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Developer" EntityType="Self.Developer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Game" EntityType="Self.Game" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GamePreview" EntityType="Self.GamePreview" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Genre" EntityType="Self.Genre" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NameLogo" EntityType="Self.NameLogo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

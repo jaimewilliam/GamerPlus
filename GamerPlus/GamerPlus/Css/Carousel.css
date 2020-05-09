@@ -1,0 +1,104 @@
+﻿body {
+}
+
+.Limage {
+    position: absolute;
+    width: 70%;
+    height: calc(100% * 4);
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.Simage {
+    position: absolute;
+    width: 30%;
+    height: calc(100% + (100% / 3));
+    display: inline-block;
+    vertical-align: top;
+    top: 0;
+    right: 0
+}
+
+.div_imgdetails {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: -20%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.div_imgdetails_ {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px
+}
+
+.div_imgdetails_0 {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px
+}
+
+.nameandprice {
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.gamename {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: x-large;
+    font-family: 'Century Gothic';
+    text-transform: uppercase;
+    color: #ffffff
+}
+
+.gameprice {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: large;
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.addtocart_div {
+    position: relative;
+    width: 100%;
+    height: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.btnaddtocart {
+    position: relative;
+    float: right;
+    width: auto;
+    height: auto;
+    font-size: large;
+    font-family: 'Century Gothic';
+    cursor: pointer
+}
+
+.image_div {
+    position: relative;
+    width: 100%;
+    height: calc(100% / 4);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}

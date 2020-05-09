@@ -1,0 +1,25 @@
+﻿@model IEnumerable<GamerPlus.Models.GamePreview>
+
+
+<div class="gameprev_main">
+    
+    @foreach (var item in Model)
+    {
+        if (item.PreviewType == 2)
+        {
+            <div class="video_div">
+                <iframe class="iframe" src="@item.Preview" frameborder="0" allowfullscreen="" scrolling="no"></iframe>
+            </div><!--
+         -->
+        }
+        else
+        {
+            <div class="video_div">
+                <div class="screenshot" style="background-image: url('@item.Preview');"></div>
+            </div>
+        }
+        
+    }
+    
+</div>
+

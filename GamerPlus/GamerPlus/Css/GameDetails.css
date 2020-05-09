@@ -1,0 +1,241 @@
+﻿body {
+}
+
+.detailcontainer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff
+}
+
+    .detailcontainer:hover {
+        overflow-y: scroll
+    }
+
+.detailhead {
+    position: relative;
+    width: 700px;
+    height: 45%
+}
+
+.photo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photodetails {
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    bottom: 0;
+    padding: 15px
+}
+
+.photodetails_left {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top
+}
+
+.gamename_div {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    font-family: 'Century Gothic';
+    font-size: x-large;
+    font-weight: bold;
+    color: #fff;
+}
+
+.devpub_div {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    font-family: 'Century Gothic';
+    font-size: large;
+    font-weight: bold;
+    color: #fff;
+}
+
+.platform_div {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    font-family: 'Century Gothic';
+    font-size: small;
+    font-weight: bold;
+    color: #fff;
+}
+
+.photodetails_right {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top
+}
+
+.photodetails_addtocart_div {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.photodetails_btnaddtocart {
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: large;
+    font-family: 'Century Gothic';
+    cursor: pointer;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.detailbody {
+    position: relative;
+    width: 700px;
+    height: 80%;
+    overflow: hidden
+}
+
+    .detailbody:hover {
+        overflow-y: scroll
+    }
+
+.details_div {
+    position: relative;
+    width: 700px;
+    height: 40%
+}
+
+.details_div1 {
+    position: relative;
+    width: 700px;
+    height: auto
+}
+
+.detailheader_div {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-content: center;
+    align-items: center
+}
+
+.detailheadername {
+    position: relative;
+    margin-left: 15px;
+    font-family: 'Century Gothic';
+    font-size: larger;
+    font-weight: bold;
+    color: #4c98eb
+}
+
+.detailbody_div0 {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    overflow: hidden
+}
+
+.detailbody_div1 {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    overflow: hidden
+}
+
+.detailbtn1_div {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 600ms, visibility 600ms;
+    transition: opacity 600ms, visibility 600ms;
+}
+
+.detailbtn1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    /*top: 50%;
+        transform: translateY(-50%);*/
+    background-color: transparent;
+    cursor: pointer;
+    left: 0;
+    border: none;
+    outline: none
+}
+
+.detailbtn2_div {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 600ms, visibility 600ms;
+    transition: opacity 600ms, visibility 600ms;
+}
+
+.detailbtn2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    /*top: 50%;
+        transform: translateY(-50%);*/
+    background-color: transparent;
+    cursor: pointer;
+    right: 0;
+    border: none;
+    outline: none
+}
+
+.detailarrow {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #4c98eb;
+    width: auto;
+    height: auto;
+    font-size: x-large
+}
+
+.detailbody_div0:hover .detailbtn2_div {
+    visibility: visible;
+    opacity: 1;
+}

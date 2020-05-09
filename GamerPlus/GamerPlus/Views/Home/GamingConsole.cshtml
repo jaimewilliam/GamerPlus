@@ -1,0 +1,22 @@
+﻿@model IEnumerable<GamerPlus.Models.Console>
+
+
+<div class="consolemain">
+
+    <div class="consolemain_">
+
+        @foreach (var name in Model)
+        {
+            <div class="consolname_div" onclick="Select($(this));">
+                <div class="console_leftdiv">
+                    
+                </div><!--
+             --><div class="console_rightdiv">
+                    <div class="consolename" data-consoleId="@name.Console_ID">@name.ConsoleName</div>
+                </div>
+            </div>
+        }
+
+    </div>
+
+</div>

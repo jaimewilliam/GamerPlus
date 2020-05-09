@@ -1,0 +1,21 @@
+﻿@model IEnumerable<GamerPlus.Models.Game>
+
+<style>
+
+    
+
+</style>
+
+<div class="imagemain_div0">
+    @foreach (var item in Model)
+    {
+        <div class="imagemain_div1" onclick="ChooseGame(this);">
+            <div class="gameimage" style="background-image: url('@item.Image');" data-gameid="@item.GameID"></div>
+        </div>
+
+    }
+</div>
+
+<script>
+
+</script>

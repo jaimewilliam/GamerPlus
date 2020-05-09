@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GamerPlusModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Console">
+    <Key>
+      <PropertyRef Name="Console_ID" />
+    </Key>
+    <Property Name="Console_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConsoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="GamerPlusEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Consoles" EntityType="Self.Console" />
+    <EntitySet Name="NameLogoes" EntityType="GamerPlusModel.NameLogo" />
+    <EntitySet Name="Genres" EntityType="GamerPlusModel.Genre" />
+    <EntitySet Name="Developers" EntityType="GamerPlusModel.Developer" />
+    <EntitySet Name="GamePreviews" EntityType="GamerPlusModel.GamePreview" />
+    <EntitySet Name="Games" EntityType="GamerPlusModel.Game" />
+  </EntityContainer>
+  <EntityType Name="NameLogo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AppLogo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Genre">
+    <Key>
+      <PropertyRef Name="GenreID" />
+    </Key>
+    <Property Name="GenreID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GenreName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Developer">
+    <Key>
+      <PropertyRef Name="DevID" />
+    </Key>
+    <Property Name="DevID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeveloperName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="GamePreview">
+    <Key>
+      <PropertyRef Name="PreviewID" />
+    </Key>
+    <Property Name="PreviewID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Preview" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PreviewType" Type="Int32" />
+    <Property Name="GameID_FK" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Game">
+    <Key>
+      <PropertyRef Name="GameID" />
+    </Key>
+    <Property Name="GameID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GameTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConsoleID_FK" Type="Int32" />
+    <Property Name="DevID_FK" Type="Int32" />
+    <Property Name="BestSelling" Type="Int32" />
+    <Property Name="GenreID_FK" Type="Int32" />
+    <Property Name="System_Requirements" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

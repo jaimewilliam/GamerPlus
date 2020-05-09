@@ -1,0 +1,63 @@
+﻿@model GamerPlus.Models.NewGame
+
+<link href="~/fontawesome-free-5.13.0-web/css/all.min.css" rel="stylesheet" />
+
+
+<div class="detailcontainer">
+    <div class="detailhead">
+        <div class="photo" style="background-image: url('@Model.Image')"></div>
+        <div class="photodetails">
+            <div class="photodetails_left">
+                <div class="gamename_div"><span style="margin-left:5px">@Model.GameTitle</span></div>
+                <div class="devpub_div"><span style="margin-left:5px">@Model.DeveloperName</span></div>
+                <div class="platform_div"><span style="margin-left:5px">@Model.ConsoleName</span></div>
+            </div><!--
+         --><div class="photodetails_right">
+                <div class="photodetails_addtocart_div">
+                    <div class="photodetails_btnaddtocart btn btn-info"><span class="fas fa-shopping-cart"></span> Php: @Model.Price</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="detailbody">
+        <div class="details_div">
+            
+            <div class="detailheader_div"><span class="detailheadername">Game Preview</span></div>
+            <div class="detailbody_div0">
+                @{ Html.RenderAction("GamePreview", "Home");}
+
+
+                <div class="detailbtn1_div" style="left:3%"><span class="detailarrow fas fa-arrow-left"></span>
+                    <input class="detailbtn1" id="Button2" type="button" onclick="PrevSS(this)" />
+                </div>
+
+                <div class="detailbtn2_div" style="right:3%"><span class="detailarrow fas fa-arrow-right"></span>
+                    <input class="detailbtn2" id="Button2" type="button" onclick="NextSS(this)" />
+                </div>
+
+            </div>
+
+            
+        </div>
+        <div class="details_div1">
+            <div class="detailheader_div"><span class="detailheadername">Game Description</span></div>
+            <div class="detailbody_div1" style="padding: 10px">
+                <span>@Model.Description</span>
+            </div>
+        </div>
+        <div class="details_div1">
+            <div class="detailheader_div"><span class="detailheadername">System Requirements</span></div>
+            <div class="detailbody_div1" style="padding: 10px">
+                <span>@Model.System_Req</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+    });
+
+</script>

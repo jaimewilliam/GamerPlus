@@ -1,0 +1,38 @@
+﻿@model IEnumerable<GamerPlus.Models.NewGenre>
+
+@{ 
+    int cid = 1;
+
+    if (TempData["cId"] != null)
+    {
+        cid = Convert.ToInt32(TempData["cId"]);
+    }
+}
+
+
+
+@foreach (var item in Model) {
+
+    <div class="genremain_div0">
+        <div class="genremain_div1">
+            <div class="genrename">@item.GenreName</div>
+        </div>
+        <div class="genremain_div2">
+            @{Html.RenderAction("GameList", "Home", new { genreID = item.GenreID, consoleId = cid });}
+
+            <div class="floatbtn1_div" style="left:3%" ><span class="arrow fas fa-arrow-left"></span>
+                <input class="floatbtn1" id="Button1" type="button" onclick="Prev(this)" />
+            </div>
+            
+            <div class="floatbtn2_div" style="right:3%" >
+                <span class="arrow fas fa-arrow-right"></span>
+                <input class="floatbtn2" id="Button1" type="button" onclick="Next(this)" />
+            </div>
+        </div>
+    </div>
+
+}
+
+<script>
+
+</script>
