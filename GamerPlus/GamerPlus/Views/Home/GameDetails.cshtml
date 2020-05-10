@@ -1,8 +1,4 @@
 ﻿@model GamerPlus.Models.NewGame
-
-<link href="~/fontawesome-free-5.13.0-web/css/all.min.css" rel="stylesheet" />
-
-
 <div class="detailcontainer">
     <div class="detailhead">
         <div class="photo" style="background-image: url('@Model.Image')"></div>
@@ -21,23 +17,16 @@
     </div>
     <div class="detailbody">
         <div class="details_div">
-            
             <div class="detailheader_div"><span class="detailheadername">Game Preview</span></div>
             <div class="detailbody_div0">
                 @{ Html.RenderAction("GamePreview", "Home");}
-
-
                 <div class="detailbtn1_div" style="left:3%"><span class="detailarrow fas fa-arrow-left"></span>
                     <input class="detailbtn1" id="Button2" type="button" onclick="PrevSS(this)" />
                 </div>
-
                 <div class="detailbtn2_div" style="right:3%"><span class="detailarrow fas fa-arrow-right"></span>
                     <input class="detailbtn2" id="Button2" type="button" onclick="NextSS(this)" />
                 </div>
-
             </div>
-
-            
         </div>
         <div class="details_div1">
             <div class="detailheader_div"><span class="detailheadername">Game Description</span></div>
@@ -48,16 +37,8 @@
         <div class="details_div1">
             <div class="detailheader_div"><span class="detailheadername">System Requirements</span></div>
             <div class="detailbody_div1" style="padding: 10px">
-                <span>@Model.System_Req</span>
+                <p>@Model.System_Req</p>
             </div>
         </div>
     </div>
 </div>
-
-<script>
-
-    $(document).ready(function () {
-
-    });
-
-</script>

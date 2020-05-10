@@ -34,7 +34,8 @@ namespace GamerPlus
                       "~/Css/GamePreview.css",
                       "~/Css/GamingConsole.css",
                       "~/Css/GenreList.css",
-                      "~/Css/LogoAppName.css"));
+                      "~/Css/LogoAppName.css",
+                      "~/Css/_Layout.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/gamerplusjquery").Include(
                         "~/Scripts/GPScripts/Index.js",
@@ -42,7 +43,10 @@ namespace GamerPlus
                         "~/Scripts/GPScripts/GameDetails.js",
                         "~/Scripts/GPScripts/Carousel.js",
                         "~/Scripts/GPScripts/GameList.js",
-                        "~/Scripts/GPScripts/GamingConsole.js"));
+                        "~/Scripts/GPScripts/GamingConsole.js",
+                        "~/Scripts/GPScripts/_Layout.js"));
+
+            //BundleTable.EnableOptimizations = true;
         }
     }
 }

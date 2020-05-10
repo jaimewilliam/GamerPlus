@@ -9,9 +9,6 @@
 
 namespace GamerPlus.Models
 {
-    using System;
-    using System.Collections.Generic;
-    
     public partial class NameLogo
     {
         public int ID { get; set; }

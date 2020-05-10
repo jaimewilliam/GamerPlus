@@ -10,8 +10,6 @@
 namespace GamerPlus.Models
 {
     using System;
-    using System.Collections.Generic;
-    
     public partial class GamePreview
     {
         public int PreviewID { get; set; }

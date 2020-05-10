@@ -1,43 +1,29 @@
 ﻿@model IEnumerable<GamerPlus.Models.Game>
-
-<style>
-    
-</style>
-
-    <div class="Limage">
-        @foreach (var img in Model)
-        {
-            <div class="image_div" style="background-image: url('@img.Image')">
-
-                <div class="div_imgdetails">
-                    <div class="div_imgdetails_">
-                        <div class="nameandprice">
-                            <div class="gamename">@img.GameTitle</div>
-                        </div>
-                        <div class="nameandprice">
-                            <div class="gameprice"><span>Php </span>@img.Price</div>
-                        </div>
-                    </div><!--
-                --><div class="div_imgdetails_0">
-                        <div class="addtocart_div">
-                            <div class="btnaddtocart btn btn-info">Add to Cart</div>
-                        </div>
+<div class="Limage">
+    @foreach (var img in Model)
+    {
+        <div class="image_div" style="background-image: url('@img.Image')">
+            <div class="div_imgdetails">
+                <div class="div_imgdetails_">
+                    <div class="nameandprice">
+                        <div class="gamename">@img.GameTitle</div>
+                    </div>
+                    <div class="nameandprice">
+                        <div class="gameprice"><span>Php </span>@img.Price</div>
+                    </div>
+                </div><!--
+            --><div class="div_imgdetails_0">
+                    <div class="addtocart_div">
+                        <div class="btnaddtocart btn btn-info">Add to Cart</div>
                     </div>
                 </div>
-
             </div>
-            
-        }
-    </div><!--
- --><div class="Simage" style="background-color:#0094ff">
-        @foreach (var img in Model)
-        {
-            <div class="image_div" style="background-image: url('@img.Image')"></div>
-        }
-    </div>
-    
-
-
-<script>
-
-</script>
+        </div>
+    }
+</div><!--
+--><div class="Simage" style="background-color:#0094ff">
+    @foreach (var img in Model)
+    {
+        <div class="image_div" style="background-image: url('@img.Image')"></div>
+    }
+</div>

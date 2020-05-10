@@ -1,8 +1,5 @@
 ﻿@model IEnumerable<GamerPlus.Models.GamePreview>
-
-
 <div class="gameprev_main">
-    
     @foreach (var item in Model)
     {
         if (item.PreviewType == 2)
@@ -18,8 +15,6 @@
                 <div class="screenshot" style="background-image: url('@item.Preview');"></div>
             </div>
         }
-        
     }
-    
 </div>
 

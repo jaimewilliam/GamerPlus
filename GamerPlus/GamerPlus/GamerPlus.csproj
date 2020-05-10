@@ -206,6 +206,7 @@
     <Content Include="Css\GenreList.css" />
     <Content Include="Css\Index.css" />
     <Content Include="Css\LogoAppName.css" />
+    <Content Include="Css\_Layout.css" />
     <Content Include="favicon.ico" />
     <Content Include="fontawesome-free-5.13.0-web\css\all.css" />
     <Content Include="fontawesome-free-5.13.0-web\css\all.min.css" />
@@ -2219,6 +2220,7 @@
     <Content Include="Scripts\GPScripts\GamingConsole.js" />
     <Content Include="Scripts\GPScripts\GenreList.js" />
     <Content Include="Scripts\GPScripts\Index.js" />
+    <Content Include="Scripts\GPScripts\_Layout.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -2243,7 +2245,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\CarouselBootstrap.cshtml" />
     <Content Include="Views\Home\Carousel.cshtml" />
     <Content Include="Views\Home\GamingConsole.cshtml" />
     <Content Include="Views\Home\LogoAppName.cshtml" />
