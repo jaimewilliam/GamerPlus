@@ -1,4 +1,34 @@
-﻿
+﻿function AddtoCart(addtocart) {
+    $('.bagModalMain').css("display", "block");
+    setTimeout(function () {
+        $(".bagModalMain").css({ 'opacity': '1', 'transition': '0.5s' });
+        setTimeout(function () {
+            $('.bagModal').css({'top': '45%','transition': '0.5s ease-in'});
+            setTimeout(function () {
+                $('.bagModal').css({
+                    'top': '50%',
+                    'transition': '0.5s ease-in'
+                });
+            }, 600);
+            $('.reddot').css('display', 'block');
+
+            //setTimeout(function () {
+            //    $(".bagModal").css({
+            //        'opacity': '0',
+            //        'transition': '0.5s ease-out'
+            //    });
+            //    setTimeout(function () {
+            //        $('.bagModalMain').css({
+            //            'opacity': '0',
+            //            'transition': '0.5s ease-out',
+            //            'display': 'none'
+            //        });
+            //    }, 500);
+            //}, 4000);
+        }, 500);
+    }, 200);
+}
+
 var clicked = false;
 
 function PrevSS(detailbtnPrev) {

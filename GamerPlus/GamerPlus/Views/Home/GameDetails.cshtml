@@ -10,7 +10,7 @@
             </div><!--
          --><div class="photodetails_right">
                 <div class="photodetails_addtocart_div">
-                    <div class="photodetails_btnaddtocart btn btn-info"><span class="fas fa-shopping-cart"></span> Php: @Model.Price</div>
+                    <div class="photodetails_btnaddtocart btn btn-info" onclick="AddtoCart(this)"><span class="fas fa-shopping-cart"></span> Php: @Model.Price</div>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
         <div class="details_div1">
             <div class="detailheader_div"><span class="detailheadername">System Requirements</span></div>
             <div class="detailbody_div1" style="padding: 10px">
-                <p>@Model.System_Req</p>
+                <span>@Html.Raw(Model.System_Req)</span>
             </div>
         </div>
     </div>

@@ -64,6 +64,19 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.reddot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #ff0000;
+    border-radius: 100%;
+    top: 0;
+    left: 60%;
+    z-index: 1;
+    display: none
+}
+
 /*navbar end*/
 
 .mainbody {

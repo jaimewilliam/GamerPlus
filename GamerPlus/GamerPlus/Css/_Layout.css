@@ -15,9 +15,9 @@
 .modalGameDetails {
     position: relative;
     width: 700px;
-    height: 100%;
+    height: 90%;
     cursor: pointer;
-    top: 60%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
@@ -45,4 +45,83 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: larger
+}
+
+.bagModalMain {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: none;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    overflow: hidden
+}
+
+.bagModal {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    overflow: hidden
+}
+
+.bagCenter {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bagCheckicon {
+    position: relative;
+    width: 100%;
+    height: 75%;
+}
+
+.bag {
+    position: relative;
+    font-size: 112px;
+    color: #4c98eb;
+    width: 50%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.check {
+    position: absolute;
+    font-size: 50px;
+    color: #fff;
+    width: 25%;
+    height: 25%;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.msgadd_div {
+    position: relative;
+    width: 100%;
+    height: 25%
+}
+
+.msgadd {
+    position: absolute;
+    color: #808080;
+    font-family: 'Century Gothic';
+    font-size: small;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%)
 }
